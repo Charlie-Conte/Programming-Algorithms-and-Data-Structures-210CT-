@@ -1,0 +1,38 @@
+package main;
+
+import java.util.Scanner;
+
+import week1.task1;
+
+public class Manager 
+{
+	
+	public static Scanner read;
+
+	public static void main (String[] args)
+	{
+		read = new Scanner(System.in);
+
+		System.out.println("Please Type in the Week's Worth of CourseWork You Wish To View");
+		System.out.println("Accetable Format is \"week1\" \"week2\" etc");
+		String week = read.nextLine();
+		
+		
+		
+		
+		System.out.println("Please Type in the Week's Task");
+		System.out.println("Accetable Format is \"1\" \"2\" etc");
+		String task = read.nextLine();
+		
+		
+		if (week.equals("week1")&&task.equals("1") )
+		{
+			task1.shuffle();
+		}
+		else
+		{
+			System.out.println("Error");	
+		}
+		
+	}
+}
