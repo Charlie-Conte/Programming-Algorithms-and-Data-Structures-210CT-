@@ -3,6 +3,8 @@ package main;
 import java.util.Scanner;
 import java.util.HashMap;
 
+import week1.task1;
+
 public class Manager 
 {
 	
@@ -20,24 +22,13 @@ public class Manager
 		String week = read.nextLine();
 		
 		
-		consoleSpace(2);
 		
 		
 		System.out.println("Please Type in the Week's Task");
 		System.out.println("Accetable Format is \"1\" \"2\" etc");
 		String task = read.nextLine();
 		
-		consoleSpace(2);
-		
-		try 
-		{
-			tasks.get(week + " " + task).run();
-		} 
-		catch (Exception e) 
-		{
-			System.out.println("Error");
-		}
-		
+		tasks.get(week + " " + task).run();
 		
 		
 		
@@ -51,12 +42,4 @@ public class Manager
 	}
 
 
-	public static void consoleSpace(int num) 
-	{
-		for (int i=0; i<num; i++)
-		{
-			System.out.println();
-		}
-	}
 }
-

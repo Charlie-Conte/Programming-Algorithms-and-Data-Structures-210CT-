@@ -3,15 +3,17 @@ package main;
 import java.util.Scanner;
 import java.util.HashMap;
 
+import week1.task1;
+
 public class Manager 
 {
 	
 	public static Scanner read;
-	public static HashMap<String, Tasks> tasks = new HashMap<>();
+	public HashMap<String, Tasks> tasks = new HashMap<>();
 
 	public static void main (String[] args)
 	{
-		tasks.put("week1 1",new week1.task1());
+		tasks.put
 		
 		read = new Scanner(System.in);
 
@@ -20,26 +22,21 @@ public class Manager
 		String week = read.nextLine();
 		
 		
-		consoleSpace(2);
 		
 		
 		System.out.println("Please Type in the Week's Task");
 		System.out.println("Accetable Format is \"1\" \"2\" etc");
 		String task = read.nextLine();
 		
-		consoleSpace(2);
 		
-		try 
+		if (week.equals("week1")&&task.equals("1") )
 		{
-			tasks.get(week + " " + task).run();
-		} 
-		catch (Exception e) 
-		{
-			System.out.println("Error");
+			task1.run();
 		}
-		
-		
-		
+		else
+		{
+			System.out.println("Error");	
+		}
 		
 				
 	}
@@ -51,12 +48,4 @@ public class Manager
 	}
 
 
-	public static void consoleSpace(int num) 
-	{
-		for (int i=0; i<num; i++)
-		{
-			System.out.println();
-		}
-	}
 }
-
