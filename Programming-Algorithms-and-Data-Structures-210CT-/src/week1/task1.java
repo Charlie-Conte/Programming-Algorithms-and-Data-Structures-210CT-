@@ -4,33 +4,52 @@ import main.Manager.Tasks;
 import java.util.Random;
 
 
+
+
 public class task1 implements Tasks
 {
 	@Override
 
-	public void run()
+	public void run() 
 	{
-		System.out.println("Success");
+			
 		main.Manager.consoleSpace(1);
 		
-		
-		int[] inputArray = new int[]{5,3,8,6,1,9,2,7};
-				
-		
+		System.out.println("How many integers do you want in the Array");
+		int lengthChoice = Integer.parseInt(main.Manager.read.nextLine());
+		int[] inputArray = new int[lengthChoice];
+		for (int i = 1; i < lengthChoice + 1; i++)
+		{
+			System.out.println("Please input integer " + i);
+			inputArray[i-1] = Integer.parseInt(main.Manager.read.nextLine());
+		}
+			
 		randomizeArray(inputArray);		
 		
 		System.out.println("int array");
 		for (int i=0; i<inputArray.length; i++)
 		{
-			System.out.print(inputArray[i]+" ");
+			System.out.println(inputArray[i]+" ");
 		}
+		
+		main.openText.openPsuedoCode("Task1_1explenation.txt");
+		
+		main.Manager.consoleSpace(20);
+		System.out.println("Rerun Code  y / n");
+		String choice = main.Manager.read.nextLine();
+		if (choice.equals("y")) run();
+		
+			
+		
+			
+		
 		
 	}
 	public static int[] randomizeArray(int[] array)
 	{
 		Random rgn = new Random();  		
  
-		for (int i=0; i<array.length; i++) 
+		for (int i = 0; i<array.length; i++) 
 		{
 		    int randomPosition = rgn.nextInt(array.length);
 		    int temp = array[i];
@@ -40,4 +59,6 @@ public class task1 implements Tasks
  
 		return array;
 	}
+
+	
 }

@@ -1,6 +1,7 @@
 package main;
 
 import java.util.Scanner;
+import java.io.IOException;
 import java.util.HashMap;
 
 public class Manager 
@@ -40,14 +41,14 @@ public class Manager
 		
 		
 		
-		
+		read.nextLine();
 				
 	}
 	
 	
 	public static interface Tasks
 	{
-		void run();
+		void run() throws IOException;
 	}
 
 
