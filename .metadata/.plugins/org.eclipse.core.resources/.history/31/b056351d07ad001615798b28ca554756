@@ -29,20 +29,15 @@ public class task1 implements Tasks
 		System.out.println("int array");
 		for (int i=0; i<inputArray.length; i++)
 		{
-			System.out.print(inputArray[i]+" ");
+			System.out.println(inputArray[i]+" ");
 		}
 		
-		main.Manager.consoleSpace(1);
-		System.out.println("open rationale behind implementation  y / n");
-		String choice = main.Manager.read.nextLine();
-		if (choice.equals("y")) main.openText.openPsuedoCode("Task1_1explenation.txt");
+		main.openText.openPsuedoCode("Task1_1explenation.txt");
 		
-		
-		
-		main.Manager.consoleSpace(1);
+		main.Manager.consoleSpace(20);
 		System.out.println("Rerun Code  y / n");
-		String choice2 = main.Manager.read.nextLine();
-		if (choice2.equals("y")) run();
+		String choice = main.Manager.read.nextLine();
+		if (choice.equals("y")) run();
 		
 			
 		
@@ -56,10 +51,10 @@ public class task1 implements Tasks
  
 		for (int i = 0; i<array.length; i++) 
 		{
-		    int randomPosition = rg.nextInt(array.length);//generates a random number between 0 and the array.length
-		    int temp = array[i];//copies the current value from the array at position i
-		    array[i] = array[randomPosition];//the current position is changed to the random number
-		    array[randomPosition] = temp;//that position takes the value from where i was
+		    int randomPosition = rg.nextInt(array.length);
+		    int temp = array[i];
+		    array[i] = array[randomPosition];
+		    array[randomPosition] = temp;
 		}
  
 		return array;

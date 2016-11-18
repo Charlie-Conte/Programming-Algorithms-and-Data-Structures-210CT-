@@ -8,20 +8,18 @@ public class Manager
 {
 	
 	public static Scanner read;
-	public static HashMap<String, Tasks> tasks = new HashMap<>();//using this and overwrites i can create a tasks launch selector
+	public static HashMap<String, Tasks> tasks = new HashMap<>();
 
 	public static void main (String[] args)
 	{
-		tasks.put("week1 1",new week1.task1());//id's and locations of methods 
+		tasks.put("week1 1",new week1.task1());
 		tasks.put("week1 2",new week1.task2());
 		
-		tasks.put("week2 1",new week2.task1());
-		
-		read = new Scanner(System.in);//read line in command line 
+		read = new Scanner(System.in);
 
 		System.out.println("Please Type in the Week's Worth of CourseWork You Wish To View");
 		System.out.println("Accetable Format is \"week1\" \"week2\" etc");
-		String week = read.nextLine();//id part 1
+		String week = read.nextLine();
 		
 		
 		consoleSpace(2);
@@ -29,13 +27,13 @@ public class Manager
 		
 		System.out.println("Please Type in the Week's Task");
 		System.out.println("Accetable Format is \"1\" \"2\" etc");
-		String task = read.nextLine();//id part 2
+		String task = read.nextLine();
 		
 		consoleSpace(2);
 		
 		try 
 		{
-			tasks.get(week + " " + task).run();//try's to run a method depending on the key the user entered
+			tasks.get(week + " " + task).run();
 		} 
 		catch (Exception e) 
 		{
@@ -44,7 +42,7 @@ public class Manager
 		
 		
 		main.Manager.consoleSpace(20);
-		System.out.println("Rerun Application  y / n");//choice to rerun application
+		System.out.println("Rerun Application  y / n");
 		String choice = main.Manager.read.nextLine();
 		if (choice.equals("y")) main(args);
 		
@@ -52,13 +50,13 @@ public class Manager
 	}
 	
 	
-	public static interface Tasks//second part of tasks launch selector
+	public static interface Tasks
 	{
 		void run() throws IOException;
 	}
 
 
-	public static void consoleSpace(int num) //simple method to make the application more legible via new lines
+	public static void consoleSpace(int num) 
 	{
 		for (int i=0; i<num; i++)
 		{
