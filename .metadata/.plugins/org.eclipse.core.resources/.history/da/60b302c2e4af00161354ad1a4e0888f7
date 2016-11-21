@@ -10,10 +10,10 @@ public class task1 implements Tasks
 		main.Manager.consoleSpace(1);
 		System.out.println("Please enter an integer that you wish to learn the highest perfect square for");
 		double input = Double.parseDouble(main.Manager.read.nextLine());
-		double root = Math.floor(Math.sqrt(input));
+		double root = Math.sqrt(input);
 		int output = (int)(root * root);		
 		System.out.println("The highest perfect square for " + (int)input + " is");
-		System.out.println(output);
+		System.out.println(root);
 		
 		main.Manager.consoleSpace(1);
 		System.out.println("open pseudocode  y / n");

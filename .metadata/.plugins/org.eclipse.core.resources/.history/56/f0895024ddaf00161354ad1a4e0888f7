@@ -9,7 +9,7 @@ public class openText
 {
 	public static void openPsuedoCode(String input) 
 	{
-		File explanation = new File(System.getProperty("user.dir").replaceAll("\\\\", "\\\\\\\\") + "\\PsuedoCode&Text_Tasks\\" + input);
+		File explanation = new File(System.getProperty("user.dir").replaceAll("\\\\", "\\\\\\\\") + "\\PsuedoCode\\" + input);
 		Desktop desktop = Desktop.getDesktop();
 		if(explanation.exists())
 			try {

@@ -1,0 +1,7 @@
+TASK 1 
+task 1 has the Big O notation of O(n) this is because the code only contains three
+loops that are dependant on N and are not nested.
+
+TASK 2 
+task 2 has the Big O notation of O(n) this is because the code only contains one
+loop that is dependant on N and are not nested.

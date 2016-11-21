@@ -2,7 +2,7 @@ package week2;
 
 import main.Manager.Tasks;
 
-public class task1 implements Tasks
+public class task2 implements Tasks
 {
 	@Override
 	public void run() 
