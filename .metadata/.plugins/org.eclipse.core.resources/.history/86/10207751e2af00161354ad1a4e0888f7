@@ -1,8 +1,0 @@
-After getting the users input for the integer array. I called a seperate method to randomise the order of the values of the array and return the shuffled array.
-
-To do this i decided to import java's utility Random so that I could generate a psuedo-random number between the the value for the size of the array and 0.
-
-I then create a temporary integer that will have the same value as the current position in the array. Then I set the current value to equal the value of the random position. Then I set the value of the random position to equal the temporary value.
-The current value is then incremented and the code repeats untill it has gone through the length of the array.
-
-In essence this method just takes the current position value and swaps it with a random position value. It is a simple method that will shuffle the array around adequately and I think it is the easiest way to generate a random array.

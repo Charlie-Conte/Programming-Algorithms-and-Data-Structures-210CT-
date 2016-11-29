@@ -1,0 +1,17 @@
+package week3;
+
+import main.Manager.Tasks;
+
+public class task1 implements Tasks
+{
+	@Override
+	public void run() 
+	{
+		main.Manager.consoleSpace(1);
+		
+		String input = "the rain in spain falls mainly on the plain";
+		
+		
+		
+	}
+}

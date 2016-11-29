@@ -17,6 +17,9 @@ public class Manager
 		
 		tasks.put("week2 1",new week2.task1());
 		tasks.put("week2 2",new week2.task2());
+		tasks.put("week2 3",new week2.task3());
+		
+		tasks.put("week3 1",new week3.task1());
 		
 		read = new Scanner(System.in);//read line in command line 
 

@@ -1,9 +1,0 @@
-package main;
-
-public class openText 
-{
-	public static String name() 
-	{
-		return("");
-	}
-}

@@ -1,0 +1,5 @@
+MATRIX_ADDITION(B,C)
+	FOR (counterX ← 0; counterX < B.rowlength; counterX++)
+		FOR (counterY ← 0; counterX < B.columnlength; counterY++)
+			A ← B[counterX][counterY] + C[counterX][counterY]
+	RETURN (A)

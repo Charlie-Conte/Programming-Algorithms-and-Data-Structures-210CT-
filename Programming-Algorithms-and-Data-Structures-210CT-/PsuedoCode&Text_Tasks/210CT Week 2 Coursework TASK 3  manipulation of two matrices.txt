@@ -1,0 +1,39 @@
+MATRIX_ADDITION(B,C)
+	FOR counterX ← 0 TO B.rowlength
+		FOR counterY ← 0 TO B.columnlength
+			A ← B[counterX][counterY] + C[counterX][counterY]
+	RETURN (A)
+	
+	
+	
+MATRIX_SUBTRACTION(B,C)
+	FOR counterX ← 0 TO B.rowlength
+		FOR counterY ← 0 TO B.columnlength
+			A ← B[counterX][counterY] - C[counterX][counterY]
+	RETURN (A)
+	
+	
+	
+MATRIX_MULTIPLICATION(B,C)
+	FOR counterX1 ← 0 TO B.rowlength
+		FOR counterY2 ← 0 TO C.columnlength
+			FOR counterX2 ← 0 TO C.rowlength
+				TEMPSUM ← TEMPSUM + (B[counterX1][counterX2] * C[counterX2][counterY2])
+			A[counterX1][counterY2] ← TEMPSUM
+			TEMPSUM ← 0
+	RETURN (A)
+	
+	
+	
+BigO runtime
+
+MATRIX_ADDITION(B,C) has a runtime of O(n^2)
+MATRIX_SUBTRACTION(B,C) has a runtime of O(n^2)
+MATRIX_MULTIPLICATION(B,C) has a runtime of O(n^3)
+
+A = B * C – 2 * ( B + C )
+B + C = O(n^2)
+2 * B + C = O(n^2)
+B * C = O(n^3)
+B * C – 2 * ( B + C ) = O(n^3)
+A = O(n^3)
