@@ -1,0 +1,16 @@
+package week2;
+
+import main.Manager.Tasks;
+
+public class task3 implements Tasks
+{
+	@Override
+	public void run() 
+	{
+		main.Manager.consoleSpace(1);
+		
+		
+		
+		
+	}
+}

@@ -1,0 +1,8 @@
+﻿SENTANCE_REVERSER(INPUT)
+	words ← INPUT.Split
+	FOR i ← words.length - 1 TO 0
+		OUTPUT = OUTPUT + words[i] + " "
+	RETURN OUTPUT
+
+
+This is O(n)

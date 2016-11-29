@@ -1,0 +1,24 @@
+package week3;
+
+import main.Manager.Tasks;
+
+public class task1 implements Tasks
+{
+	@Override
+	public void run() 
+	{
+		main.Manager.consoleSpace(1);
+
+		String input = "the rain in spain falls mainly on the plain";
+		StringBuilder builder = new StringBuilder(input.length() + 1);
+		String[] words = input.split(" ");
+		for(int i = words.length - 1; i >= 0; i--)
+		{
+			builder.append(words[i]).append(' ');
+		}
+		builder.setLength(builder.length() - 1);
+		System.out.println(builder.toString());
+		
+		
+	}
+}
