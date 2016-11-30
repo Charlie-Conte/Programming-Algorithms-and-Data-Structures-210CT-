@@ -1,0 +1,13 @@
+﻿MAIN 
+	INPUT ← userinput
+	PRIME_VERIFY(INPUT, INPUT - 1)
+
+PRIME_VERIFY(in, i)
+	IF i = 1
+		RETURN true
+	IF in % i = 0
+		RETURN false
+	ELSE 
+		RETURN PRIME_VERIFY(in, i - 1)
+	
+

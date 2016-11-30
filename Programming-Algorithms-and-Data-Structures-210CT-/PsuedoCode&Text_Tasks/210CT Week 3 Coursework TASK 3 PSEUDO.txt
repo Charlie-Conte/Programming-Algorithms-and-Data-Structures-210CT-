@@ -1,0 +1,20 @@
+﻿MAIN 
+	INPUT ← userinput
+	VOWEL_REMOVER(INPUT, 0 , "")
+
+
+
+VOWEL_REMOVER(in, i, out)
+
+	IF i = in.length
+		RETURN out
+
+	here ← in.characterAt(i)
+	
+	IF here.matches("aeiouAEIOU")
+		RETURN VOWEL_REMOVER(in, i + 1, out)
+
+	ELSE 
+		RETURN VOWEL_REMOVER(in, i + 1, out + here)
+	
+
