@@ -8,6 +8,12 @@ public class task1 implements Tasks
 	public void run()
 	{
 		BinarySearchTreeSort.test();
+		
+		
+		System.out.println("Rerun Code  y / n");
+		String choice2 = main.Manager.read.next();
+		if (choice2.equals("y")) run();	
+		
 	}
 	
 	

@@ -69,6 +69,7 @@ public class task1 implements Tasks
 	
 	public boolean binary_range_search(int upperKey, int lowerKey, int[] source) 
 	{
+		//finds if any value exists between two bounds in an array and returns a boolean
 
 		int low = 0;
 		int high = source.length - 1;

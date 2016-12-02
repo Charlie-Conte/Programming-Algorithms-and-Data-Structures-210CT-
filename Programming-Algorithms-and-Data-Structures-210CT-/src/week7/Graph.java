@@ -5,25 +5,23 @@ import java.util.Vector;
 
 public class Graph 
 {
-	public static int counter = 0;
-	public Vector<String> Adjacency_list = new Vector<String>();
-	public HashMap<Integer, Node> nodeMap = new HashMap<Integer, Node>();
+	public HashMap<Integer, Node> nodeMap = new HashMap<Integer, Node>();//node holding hashmap
 	
 	
 	public void addNode(int value) 
 	{
 		
-		nodeMap.put(value, new Node(value));
-		counter++;
+		nodeMap.put(value, new Node(value));//creates a node with a value
+
 	}
 	
 	public void addEdge(int first, int second)
 	{
 		Node Ftemp = nodeMap.get(first);
-		Node Stemp = nodeMap.get(second);
+		Node Stemp = nodeMap.get(second);//Grabs the nodes based values
 		
 		Ftemp.ConnectedNodes.addElement(Stemp.value);
-		Stemp.ConnectedNodes.addElement(Ftemp.value);
+		Stemp.ConnectedNodes.addElement(Ftemp.value);//links nodes
 	}
 	
 	public Node GetNode(int id)
@@ -31,34 +29,23 @@ public class Graph
 		return nodeMap.get(id);
 	}
 	
-/*	public void ShowAdjacencyList() 
+	public int GetSize()
 	{
-		for(int i = 0; i < nodeMap.values().size(); i++)
-		{
-			Adjacency_list.addElement(nodeMap.values().);
-			
-		}
-		
-		for (Node i : nodeMap.values())
-		{
-			Adjacency_list.addElement(String.valueOf(i.value));
-			System.out.println("Node " + i + " connected nodes" + Adjacency_list.elementAt(i));
-		}
-		
-	}*/
-	
+		return nodeMap.size();
+	}
 	
 	public static class Node
 	{
-		public Node(int value/*, int id*/) 
+		public Node(int value) 
 		{
-			//this.id = id;
+
 			this.value = value;
 			this.ConnectedNodes = new Vector<Integer>();
-		}
+			this.visited = false;
+		}//node contents setter
 		public int value;
-		//public int id;
 		public Vector<Integer> ConnectedNodes;
+		public boolean visited;
 	}
 	
 }

@@ -31,6 +31,7 @@ public class Manager
 		tasks.put("week6 1",new week6.task1());
 		
 		tasks.put("week7 1",new week7.task1());
+		tasks.put("week7 2",new week7.task2());
 		
 		
 		read = new Scanner(System.in);//read line in command line 
@@ -59,6 +60,7 @@ public class Manager
 		catch (Exception e) 
 		{
 			System.out.println("Error");
+			e.printStackTrace();
 		}
 		
 		

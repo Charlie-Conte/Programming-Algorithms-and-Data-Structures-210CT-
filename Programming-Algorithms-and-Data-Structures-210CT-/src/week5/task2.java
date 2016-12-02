@@ -24,7 +24,7 @@ public class task2 implements Tasks
 		String choiceR = main.Manager.read.next();
 		Random rng = new Random();
 		
-		for (int i = 1; i < lengthChoice + 1; i++)
+		for (int i = 1; i < lengthChoice + 1; i++)//list generator
 		{
 			if (choiceR.equals("y"))
 			{
@@ -44,7 +44,7 @@ public class task2 implements Tasks
 		
 		System.out.println(userList.toString());
 		
-		ListIterator<Integer> userListEdit = userList.iterator();
+		ListIterator<Integer> userListEdit = userList.iterator();//allows for changing nodes
 		
 		
 		System.out.println("which value do you wish to delete");
@@ -53,13 +53,13 @@ public class task2 implements Tasks
 		int selection = main.Manager.read.nextInt();
 		for (int t = 0;t < selection; t++)
 		{
-			userListEdit.next();
+			userListEdit.next();//finds value
 			
 
 		}
 		userListEdit.previous();
 		System.out.println(userListEdit.next() + " has been removed");
-		
+		//removes value
 		
 		userListEdit.remove();
 		

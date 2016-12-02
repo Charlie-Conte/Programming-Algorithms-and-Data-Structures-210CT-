@@ -1,0 +1,53 @@
+﻿MAIN 
+	
+	
+	Graphtest.addNode(value1)
+	Graphtest.addNode(value2)
+	Graphtest.addNode(value3)
+	Graphtest.addNode(value4)
+	Graphtest.addNode(value5)
+	............
+
+	Graphtest.addEdge(NodeValue11, NodeValue21)
+	Graphtest.addEdge(NodeValue12, NodeValue22)
+	Graphtest.addEdge(NodeValue13, NodeValue23)
+	Graphtest.addEdge(NodeValue14, NodeValue24)
+	Graphtest.addEdge(NodeValue15, NodeValue25)
+	Graphtest.addEdge(NodeValue16, NodeValue26)
+	.............
+
+	
+
+
+Public Type Graph
+
+	public HashMap<Integer, Node> nodeMap 
+
+
+	public void addNode(value) 
+	
+		nodeMap.put(value, new Node(value))
+
+
+	public void addEdge(first, second)
+		
+		NodeFtemp ← nodeMap.get(first)
+		NodeStemp ← nodeMap.get(second)
+		
+		NodeFtemp.ConnectedNodes.addElement(NodeStemp.value)
+		NodeStemp.ConnectedNodes.addElement(NodeFtemp.value)
+
+	public Node GetNode(id)
+	
+		return nodeMap.get(id)
+
+
+
+	public static Type Node
+
+		public Node(value) 
+
+			this.value ← value
+			this.ConnectedNodes ← VectorInteger
+		public value
+		public VectorInteger ConnectedNodes

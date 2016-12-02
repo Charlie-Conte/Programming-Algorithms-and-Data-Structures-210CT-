@@ -36,7 +36,7 @@ public class task3 implements Tasks
 			return output;
 		}
 		
-		char here = input.charAt(i);
+		char here = input.charAt(i); //position in string
 	    
 	    if (Character.toString(here).matches("[aeiouAEIOU]")) 
 	    {

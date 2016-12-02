@@ -34,7 +34,7 @@ public class task1 implements Tasks
 		System.out.println("do you wish to enter a different custom Vector<Integer> y / n");
 		String arraychoice = main.Manager.read.next();
 		if (arraychoice.equals("y"))
-		{
+		{	//array generator
 			System.out.println("How many integers do you want in the Vector<Integer>");
 			int lengthChoice = main.Manager.read.nextInt();
 			main.Manager.consoleSpace(1);
@@ -93,7 +93,7 @@ public class task1 implements Tasks
 			if (sequence.get(i) > sequence.get(i+1))
 			{
 				
-				if (count > bestLength)
+				if (count > bestLength)//only triggers when best length can be improved
 				{
 					bestLength = count;
 					bestStart = tempStart;
@@ -112,7 +112,7 @@ public class task1 implements Tasks
 		}
 		
 
-		
+		//new sequence generator
 		Vector<Integer> subSequence = new Vector<Integer>();
 		for (int j = bestStart; j < bestLength + bestStart; j++)
 		{

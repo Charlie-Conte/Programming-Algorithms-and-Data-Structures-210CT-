@@ -1,0 +1,48 @@
+package week7;
+
+import java.util.HashMap;
+import java.util.Vector;
+
+public class Graph 
+{
+	public HashMap<Integer, Node> nodeMap = new HashMap<Integer, Node>();
+	
+	
+	public void addNode(int value) 
+	{
+		
+		nodeMap.put(value, new Node(value));
+
+	}
+	
+	public void addEdge(int first, int second)
+	{
+		Node Ftemp = nodeMap.get(first);
+		Node Stemp = nodeMap.get(second);
+		
+		Ftemp.ConnectedNodes.addElement(Stemp.value);
+		Stemp.ConnectedNodes.addElement(Ftemp.value);
+	}
+	
+	public Node GetNode(int id)
+	{
+		return nodeMap.get(id);
+	}
+	
+	
+	
+	public static class Node
+	{
+		public Node(int value) 
+		{
+
+			this.value = value;
+			this.ConnectedNodes = new Vector<Integer>();
+		}
+		public int value;
+		public Vector<Integer> ConnectedNodes;
+	}
+	
+}
+
+

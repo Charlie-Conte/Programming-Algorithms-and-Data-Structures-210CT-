@@ -55,32 +55,42 @@ public class BinarySearchTreeSort
 
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public static void in_order(Node n)
 	{
 		Vector<Integer> output = new Vector<Integer>();
 		Stack<Node> WStack = new Stack<Node>();
 		int temporary;
 		
-		WStack.push(n);
+		WStack.push(n);//Pushes n onto the top of this stack
 		
 		while (!WStack.empty())
 		{
 			if(n.left != null)
 			{
-				if (/*output.lastElement()!=n.left.value &&*/ output.contains(n.left.value) )
+				if (output.contains(n.left.value) )//run if node on left has been processed into the stack
 				{
 					temporary = WStack.lastElement().value;
-					WStack.pop();
+					WStack.pop();//Removes the object at the top of this stack 
 					output.add(temporary);
 					
-					if(n.right != null)
+					if(n.right != null)//run if node on the right exists
 					{
-						WStack.push(n.right);
-						n=n.right;
+						WStack.push(n.right);//Pushes the node on the right onto the top of this stack
+						n=n.right;//moves position
 					}
 					else
 					{
-						if(!WStack.empty()) n = WStack.lastElement();
+						if(!WStack.empty()) n = WStack.lastElement();//moves position
 					}
 					
 				}
@@ -113,29 +123,23 @@ public class BinarySearchTreeSort
 		for (int i = 0; i < output.size(); i++)
 	    {
 	        
-	        System.out.print(output.get(i) + "   ");
+	        System.out.print(output.get(i) + "   ");//prints sorted stack
 	    }
 		
-	 /* if (n.left != null)
-	  {
-		in_order(n.left);
 		
-	  }
-	  
-	  
-	  System.out.print(n.value + "\n");
-	  
-	  
-	  
-	  
-	  
-	  if (n.right != null)
-	  {
-		in_order(n.right);
-	  }*/
-
 	  
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	public static void test()
 	{
@@ -150,7 +154,6 @@ public class BinarySearchTreeSort
 	  
 	  
 	  
-	  //System.out.print(counter);
 	  main.Manager.read.nextLine();
 	}
 	public static int counter=0;

@@ -16,7 +16,7 @@ public class task1 implements Tasks
 		
 		//String input = "the rain in Spain falls mainly on the plain";
 		
-		String[] words = input.split(" ");
+		String[] words = input.split(" ");//splits the sentence into words, where there are spaces, that go in the string array 
 		for(int i = words.length - 1; i >= 0; i--)
 		{
 			output = output + words[i] + " ";
