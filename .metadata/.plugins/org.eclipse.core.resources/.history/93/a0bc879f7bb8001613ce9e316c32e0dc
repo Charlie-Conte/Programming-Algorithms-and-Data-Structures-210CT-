@@ -1,0 +1,116 @@
+package week6;
+
+
+
+public class BinarySearchTreeSort
+{
+	public static Node tree_insert(Node tree, int item)
+	{
+	  if (tree == null)
+	  {
+		tree = new Node(item);
+	  }
+	  else
+	  {
+		if (item < tree.value)
+		{
+		  if (tree.left == null)
+		  {
+			tree.left = new Node(item);
+		  }
+		  else
+		  {
+			tree_insert(tree.left, item);
+		  }
+		}
+		else
+		{
+		  if (tree.right == null)
+		  {
+			tree.right = new Node(item);
+		  }
+		  else
+		  {
+			tree_insert(tree.right, item);
+		  }
+		}
+	  }
+	  return tree;
+
+	}
+
+	public static void postorder(Node tree)
+	{
+	  if (tree.left != null)
+	  {
+		postorder(tree.left);
+	  }
+	  if (tree.right != null)
+	  {
+		postorder(tree.right);
+	  }
+	  System.out.print(tree.value);
+	  System.out.print("\n");
+
+	}
+
+	public static void in_order(Node n)
+	{
+	  if (n.left != null)
+	  {
+		in_order(n.left);
+		
+	  }
+	  
+	  
+	  System.out.print(n.value + "\n");
+	  counter++;
+	  
+	  
+	  
+	  
+	  
+	  if (n.right != null)
+	  {
+		in_order(n.right);
+	  }
+
+	  for (int i = 0; i == counter;i++)
+	  {
+		  
+	  }
+	  
+	}
+
+	public static void test()
+	{
+	  Node t = tree_insert(null, 6);
+	  tree_insert(t, 10);
+	  tree_insert(t, 5);
+	  tree_insert(t, 2);
+	  tree_insert(t, 3);
+	  tree_insert(t, 4);
+	  tree_insert(t, 11);
+	  in_order(t);
+	  
+	  System.out.print(counter);
+	  main.Manager.read.nextLine();
+	}
+	public static int counter=0;
+}
+
+
+class Node
+{
+  public Node(int value)
+  {
+	this.value = value;
+	this.left = null;
+	this.right = null;
+  }
+  public int value;
+  public Node left;
+  public Node right;
+
+}
+

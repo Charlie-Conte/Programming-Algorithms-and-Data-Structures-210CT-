@@ -1,0 +1,54 @@
+package week7;
+
+import java.util.Vector;
+
+public class Graph 
+{
+	public static int counter = 0;
+	public Vector<Node> nodes = new Vector<Node>();
+	public Vector<String> Adjacency_list = new Vector<String>();
+	
+	
+	
+	public void addNode(int value) 
+	{
+		nodes.addElement(new Node(value, counter));
+		counter++;
+	}
+	
+	public void addEdge(int first, int second)
+	{
+		Node Ftemp = nodes.get(first);
+		Node Stemp = nodes.get(second);
+		
+		Ftemp.ConnectedNodes.addElement(Stemp.id);
+		Stemp.ConnectedNodes.addElement(Ftemp.id);
+	}
+	
+	public Node GetNode(int id)
+	{
+		return nodes.elementAt(id);
+	}
+	
+	public void AdjacencyList() 
+	{
+		Adjacency_list.addElement(obj);
+	}
+	
+	
+	public static class Node
+	{
+		public Node(int value, int id) 
+		{
+			this.id = id;
+			this.value = value;
+			this.ConnectedNodes = new Vector<Integer>();
+		}
+		public int value;
+		public int id;
+		public Vector<Integer> ConnectedNodes;
+	}
+	
+}
+
+

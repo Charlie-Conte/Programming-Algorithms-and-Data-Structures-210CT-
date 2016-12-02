@@ -1,0 +1,67 @@
+package week5;
+
+import java.util.ListIterator;
+import java.util.Random;
+
+import main.Manager;
+import main.Manager.Tasks;
+
+public class task2 implements Tasks
+{
+	@Override
+	
+	public void run() 
+	{
+		DoublyLinkedList<Integer> userList =  new DoublyLinkedList<Integer>();
+		
+		
+		System.out.println("How many integers do you want in the DoublyLinkedList<Integer>");
+		int lengthChoice = main.Manager.read.nextInt();
+		main.Manager.consoleSpace(1);
+		System.out.println("Do you want to random these values y / n");
+		
+		String choiceR = main.Manager.read.next();
+		Random rng = new Random();
+		
+		for (int i = 1; i < lengthChoice + 1; i++)
+		{
+			if (choiceR.equals("y"))
+			{
+				userList.add(rng.nextInt(100));
+			}
+			else 
+			{
+				System.out.println("Please input integer " + i);
+				userList.add(Manager.read.nextInt());
+			}
+			
+		}
+		
+		
+		
+		System.out.println("The DoublyLinkedList<Integer> is:");
+		
+		System.out.println(userList.toString());
+		
+		
+		System.out.println("which value do you wish to delete");
+		System.out.println("please enter which place the value comes in the list");
+		
+		//int selection = main.Manager.read.nextInt();
+		
+		System.out.println(userList.iterator().next());
+		
+		
+		main.Manager.consoleSpace(1);
+		
+		System.out.println("Rerun Code  y / n");
+		String choice2 = main.Manager.read.nextLine();
+		if (choice2.equals("y")) run();	
+		
+	}
+	
+
+	
+	
+
+}

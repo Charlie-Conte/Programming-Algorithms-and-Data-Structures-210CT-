@@ -1,0 +1,42 @@
+package week7;
+
+import main.Manager.Tasks;
+
+
+public class task1 implements Tasks 
+{
+	@Override
+	public void run()
+	{
+		Graph test = new Graph();
+		
+		test.addNode(3);
+		test.addNode(13);
+		test.addNode(22);
+		test.addNode(23);
+		test.addNode(11);
+		
+		test.addEdge(3, 13);
+		test.addEdge(3, 22);
+		
+		System.out.println("Node:\t" + test.GetNode(3).value + " connected nodes: " + test.GetNode(3).ConnectedNodes.toString());
+		System.out.println("Node:\t" + test.GetNode(22).value + " connected nodes: " + test.GetNode(22).ConnectedNodes.toString());
+		System.out.println("Node:\t" + test.GetNode(23).value + " connected nodes: " + test.GetNode(23).ConnectedNodes.toString());
+	
+
+		
+		main.Manager.consoleSpace(1);
+		System.out.println("open pseudocode  y / n");
+		String choice = main.Manager.read.next();
+		if (choice.equals("y")) main.openText.openPsuedoCode("210CT Week 4 Coursework TASK 1 PSEUDO.txt");
+		
+		
+		System.out.println("Rerun Code  y / n");
+		String choice2 = main.Manager.read.next();
+		if (choice2.equals("y")) run();	
+	
+	}
+	
+	
+
+}

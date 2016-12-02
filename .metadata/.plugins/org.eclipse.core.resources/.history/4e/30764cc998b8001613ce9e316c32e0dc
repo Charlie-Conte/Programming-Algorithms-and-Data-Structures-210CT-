@@ -1,0 +1,60 @@
+package week7;
+
+import java.util.HashMap;
+import java.util.Vector;
+
+public class Graph 
+{
+	public static int counter = 0;
+	public Vector<String> Adjacency_list = new Vector<String>();
+	public HashMap<Integer, Node> nodeMap = new HashMap<Integer, Node>();
+	
+	
+	public void addNode(int value) 
+	{
+		
+		nodeMap.put(value, new Node(value));
+		counter++;
+	}
+	
+	public void addEdge(int first, int second)
+	{
+		Node Ftemp = nodeMap.get(first);
+		Node Stemp = nodeMap.get(second);
+		
+		Ftemp.ConnectedNodes.addElement(Stemp.value);
+		Stemp.ConnectedNodes.addElement(Ftemp.value);
+	}
+	
+	public Node GetNode(int id)
+	{
+		return nodeMap.get(id);
+	}
+	
+	public void ShowAdjacencyList() 
+	{
+		for(int i = 0; i < nodes.size(); i++)
+		{
+			Adjacency_list.addElement(nodes.get(i).ConnectedNodes.toString());
+			System.out.println("Node " + i + " connected nodes" + Adjacency_list.elementAt(i));
+		}
+		
+	}
+	
+	
+	public static class Node
+	{
+		public Node(int value/*, int id*/) 
+		{
+			//this.id = id;
+			this.value = value;
+			this.ConnectedNodes = new Vector<Integer>();
+		}
+		public int value;
+		//public int id;
+		public Vector<Integer> ConnectedNodes;
+	}
+	
+}
+
+

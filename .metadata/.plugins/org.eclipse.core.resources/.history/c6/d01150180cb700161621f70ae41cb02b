@@ -1,0 +1,21 @@
+package week5;
+
+import main.Manager.Tasks;
+
+public class task1 implements Tasks
+{
+	@Override
+	
+	public void run() 
+	{
+		int i = 3;
+		
+		int[] holder =new int[i];
+		
+		System.out.println("Rerun Code  y / n");
+		String choice2 = main.Manager.read.next();
+		if (choice2.equals("y")) run();	
+		
+		
+	}
+}

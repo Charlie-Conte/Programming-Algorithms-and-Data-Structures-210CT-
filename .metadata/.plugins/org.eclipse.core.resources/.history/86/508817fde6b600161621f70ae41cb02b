@@ -1,0 +1,62 @@
+package week4;
+
+import main.Manager.Tasks;
+
+public class task1 implements Tasks
+{
+	@Override
+	
+	public void run() 
+	{
+		main.Manager.consoleSpace(1);
+		
+		System.out.println("Please enter the string you wish to remove the vowels from");
+		
+		int upper = main.Manager.read.nextInt();
+		int lower = main.Manager.read.nextInt();
+		int[] test = new int[]{1,2,3,5,8,13,21,34,55,89,144,233,377,610,987};
+		
+		
+		System.out.println(binary_search(upper, lower, test));
+		
+		main.Manager.consoleSpace(1);
+		System.out.println("open pseudocode  y / n");
+		String choice = main.Manager.read.next();
+		if (choice.equals("y")) main.openText.openPsuedoCode("210CT Week 4 Coursework TASK 1 PSEUDO.txt");
+		
+		
+		System.out.println("Rerun Code  y / n");
+		String choice2 = main.Manager.read.next();
+		if (choice2.equals("y")) run();	
+		
+		
+	}
+	
+	public boolean binary_search(int upperKey, int lowerKey, int[] source) 
+	{
+
+		int size = source.length;
+		int low = 0;
+		int high = size - 1;
+
+		while(high >= low) 
+		{
+			int middle = (low + high) / 2;
+			if(source[middle] >= lowerKey && source[middle] <= upperKey) 
+			{
+				return true;
+			}
+			if(source[middle] < lowerKey) 
+			{
+				low = middle + 1;
+			}
+			if(source[middle] > upperKey) 
+			{
+				high = middle - 1;
+			}
+		}
+		return false;
+		   
+		
+	}
+}

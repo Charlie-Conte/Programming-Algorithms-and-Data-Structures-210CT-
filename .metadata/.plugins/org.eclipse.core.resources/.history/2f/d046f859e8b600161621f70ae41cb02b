@@ -1,0 +1,72 @@
+package week4;
+
+import main.Manager.Tasks;
+
+public class task1 implements Tasks
+{
+	@Override
+	
+	public void run() 
+	{
+		main.Manager.consoleSpace(1);
+		int[] test = new int[]{2, 9, 18, 19, 29, 30, 44, 46, 55, 58, 61, 63, 64, 65, 70, 79, 80, 85, 89, 94};
+		
+		System.out.println("The default array is:");
+		for (int i = 0; i < test.length; i++) 
+		{
+			System.out.print(test[i]);
+		}
+		
+		
+		System.out.println("Please enter the start of the range to test for");
+		int lower = main.Manager.read.nextInt();
+		
+		System.out.println("Please enter the end of the range to test for");
+		int upper = main.Manager.read.nextInt();
+		
+		
+		
+		
+		System.out.println(binary_search(upper, lower, test));
+		
+		main.Manager.consoleSpace(1);
+		System.out.println("open pseudocode  y / n");
+		String choice = main.Manager.read.next();
+		if (choice.equals("y")) main.openText.openPsuedoCode("210CT Week 4 Coursework TASK 1 PSEUDO.txt");
+		
+		
+		System.out.println("Rerun Code  y / n");
+		String choice2 = main.Manager.read.next();
+		if (choice2.equals("y")) run();	
+		
+		
+	}
+	
+	public boolean binary_search(int upperKey, int lowerKey, int[] source) 
+	{
+
+		int size = source.length;
+		int low = 0;
+		int high = size - 1;
+
+		while(high >= low) 
+		{
+			int middle = (low + high) / 2;
+			if(source[middle] >= lowerKey && source[middle] <= upperKey) 
+			{
+				return true;
+			}
+			if(source[middle] < lowerKey) 
+			{
+				low = middle + 1;
+			}
+			if(source[middle] > upperKey) 
+			{
+				high = middle - 1;
+			}
+		}
+		return false;
+		   
+		
+	}
+}

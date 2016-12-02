@@ -1,0 +1,31 @@
+package week7;
+
+import main.Manager.Tasks;
+
+
+public class task1 implements Tasks 
+{
+	@Override
+	public void run()
+	{
+		Graph test = new Graph();
+		
+		test.addNode(3);
+		test.addNode(13);
+		test.addNode(22);
+		test.addNode(23);
+		test.addNode(11);
+		
+		test.addEdge(0, 1);
+		test.addEdge(0, 3);
+		
+		System.out.println("id: " + test.GetNode(0).id + " value:" + test.GetNode(0).value + " connected nodes: " + test.GetNode(0).ConnectedNodes.toString());
+		System.out.println("id: " + test.GetNode(3).id + " value:" + test.GetNode(3).value + " connected nodes: " + test.GetNode(3).ConnectedNodes.toString());
+		
+		
+		System.out.println("id: " + test.GetNode(4).id + " value:" + test.GetNode(4).value + " connected nodes: " + test.GetNode(4).ConnectedNodes.toString());
+	}
+	
+	
+
+}

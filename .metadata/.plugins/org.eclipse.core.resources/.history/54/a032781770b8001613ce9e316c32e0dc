@@ -1,0 +1,25 @@
+package week6;
+
+public class BinarySearchTree
+{
+
+	public BinTreeNode(int in)
+	{
+		
+	}
+	
+	
+}
+class Node
+{
+	int content;
+	Node left;
+	Node right;
+	public Node(int content)
+	{
+		this.content = content;
+		left = null;
+		right = null;
+	}
+	
+}

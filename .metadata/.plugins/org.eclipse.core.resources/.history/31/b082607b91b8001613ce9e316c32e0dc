@@ -1,0 +1,21 @@
+package week7;
+
+import main.Manager.Tasks;
+
+
+public class task1 implements Tasks 
+{
+	@Override
+	public void run()
+	{
+		Graph test = new Graph();
+		
+		test.addNode(3);
+		test.addNode(13);
+		
+		System.out.println(test.GetNode(0).value);
+	}
+	
+	
+
+}

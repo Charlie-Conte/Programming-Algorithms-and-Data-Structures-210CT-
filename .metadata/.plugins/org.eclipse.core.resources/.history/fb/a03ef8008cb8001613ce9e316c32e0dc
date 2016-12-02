@@ -1,0 +1,19 @@
+package week7;
+
+import java.util.Vector;
+
+public class Graph 
+{
+	
+}
+
+class Node
+{
+	public Node(int value) 
+	{
+		this.value = value;
+		this.ConnectedNodes = new Vector<Integer>();
+	}
+	public int value;
+	public Vector<Integer> ConnectedNodes;
+}

@@ -1,0 +1,36 @@
+package week5;
+
+import main.Manager;
+import main.Manager.Tasks;
+
+public class task2 implements Tasks
+{
+	@Override
+	
+	public void run() 
+	{
+		DoublyLinkedList<Integer> userList =  new DoublyLinkedList<Integer>();
+		
+		
+		System.out.println("How many integers do you want in the DoublyLinkedList<Integer>");
+		int lengthChoice = main.Manager.read.nextInt();
+		main.Manager.consoleSpace(1);
+		for (int i = 1; i < lengthChoice + 1; i++)
+		{
+			System.out.println("Please input integer " + i);
+			userList.add(Manager.read.nextInt());
+			
+			
+		}
+		
+		System.out.println("The new DoublyLinkedList<Integer> is:");
+		
+		System.out.print(userList.toString());
+		
+	}
+	
+
+	
+	
+
+}

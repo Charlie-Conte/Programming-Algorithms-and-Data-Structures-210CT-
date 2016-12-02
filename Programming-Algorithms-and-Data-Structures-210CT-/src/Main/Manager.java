@@ -23,7 +23,20 @@ public class Manager
 		tasks.put("week3 2",new week3.task2());
 		tasks.put("week3 3",new week3.task3());
 		
+		tasks.put("week4 1",new week4.task1());
+		
+		tasks.put("week5 1",new week5.task1());
+		tasks.put("week5 2",new week5.task2());
+		
+		tasks.put("week6 1",new week6.task1());
+		
+		tasks.put("week7 1",new week7.task1());
+		
+		
 		read = new Scanner(System.in);//read line in command line 
+
+		
+		
 
 		System.out.println("Please Type in the Week's Worth of CourseWork You Wish To View");
 		System.out.println("Accetable Format is \"week1\" \"week2\" etc");
@@ -51,6 +64,7 @@ public class Manager
 		
 		main.Manager.consoleSpace(20);
 		System.out.println("Rerun Application  y / n");//choice to rerun application
+		consoleSpace(1);
 		String choice = main.Manager.read.nextLine();
 		if (choice.equals("y")) main(args);
 		

@@ -1,0 +1,40 @@
+package week7;
+
+import java.util.Vector;
+
+public class Graph 
+{
+	public static int counter = 0;
+	public Vector<Node> nodes = new Vector<Node>();
+	
+	
+	
+	public void addNode(int value) 
+	{
+		nodes.addElement(new Node(value, counter));
+		counter++;
+	}
+	
+	public void addEdge(int first, int second)
+	{
+		Node Ftemp = nodes.get(first);
+	}
+	
+	
+	
+	public static class Node
+	{
+		public Node(int value, int id) 
+		{
+			this.id = id;
+			this.value = value;
+			this.ConnectedNodes = new Vector<Integer>();
+		}
+		public int value;
+		public int id;
+		public Vector<Integer> ConnectedNodes;
+	}
+	
+}
+
+

@@ -1,0 +1,15 @@
+package week7;
+
+public class Graph 
+{
+	public static return_type name() {
+		
+	}
+}
+class Node()
+{
+	public Node(int value) 
+	{
+		
+	}
+}

@@ -1,0 +1,15 @@
+package week7;
+
+public class Graph 
+{
+	
+}
+
+class Node
+{
+	public Node(int value) 
+	{
+		this.value = value;
+	}
+	public int value;
+}
